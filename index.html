@@ -6,12 +6,11 @@
     <title>Karen's Personal Website</title>
     <link href="https://fonts.googleapis.com/css?family=IM Fell French Canon|Mulish|Oswald" rel="stylesheet">
     <style>
-        
-        /* Style the text */
+      /* Style the text */
       body {
         font-family: "IM Fell French Canon", sans-serif;
         font-size: 20px;
-        background-color: #7D8EC4;
+        background-color: #D0CBC1;
       }
 
       p {
@@ -19,7 +18,7 @@
         font-family: "Mulish", sans-serif;
         font-size: 15px;
         padding: 0.5em 0.5em 0.5em 20px;
-        color: #48578E;
+        color: #7A8A65;
         width: auto;
         overflow: hidden;
         border-radius: 10px;
@@ -30,13 +29,13 @@
         margin-top: 15px;
         margin-bottom: 5px;
         text-align: center;
-        color: #212C58;
+        color: #5B493C;
         font-size: 60px;
       }
 
       h2 {
         font-family: "Mulish", sans-serif;
-        color: #334173;
+        color: #AD9874;
         font-size: 25px;
         display: inline-block;
         margin-top: 5px;
@@ -45,7 +44,7 @@
 
       h3 {
         font-family: "Mulish", sans-serif;
-        color: #334173;
+        color: #AD9874;
         font-size: 20px;
         display: inline-block;
         margin-top: 0px;
@@ -61,7 +60,7 @@
       strong {
         list-style-type: none;
         font-family: "Mulish", sans-serif;
-        color: #48578E;
+        color: #4F5646;
       }
 
       li {
@@ -69,7 +68,7 @@
         font-size: 15px;
         padding: 5px;
         font-family: "Mulish", sans-serif;
-        color: #7D8EC4;
+        color: #7A8A65;
         overflow: hidden;
         border-radius: 10px;
       }
@@ -79,27 +78,27 @@
         overflow: hidden;
         border-radius: 50px;
         border: none;
-        background-color: #C0CFFA;
+        background-color: #5B493C;
       }
 
       .tab button {
         font-family: "IM Fell French Canon", monospace;
-        background-color: #C0CFFA;
+        background-color: #5B493C;
         border: none;
         cursor: pointer;
         padding: 5px 20px;
-        transition: 0.5s;
+        transition: 0.4s;
         font-size: 20px;
         border-radius: 50px;
-        color: #48578E;
+        color: #AD9874;
       }
 
       .tab button:hover {
-        background-color: #9DADDF;
+        background-color: #D0CBC1;
       }
 
       .tab button.active {
-        background-color: #C0CFFA;
+        background-color: #D0CBC1;
       }
 
       .tabcontent {
@@ -107,8 +106,18 @@
         padding: 10px 20px;
         border-top: none;
       }
-        
-        /* Style the About Me Container */
+
+      .tab li {
+        background-color: white;
+        font-size: 15px;
+        padding: 5px;
+        font-family: "Mulish", sans-serif;
+        color: #AD9874;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      /* Style the About Me Container */
       .flex-container {
         width: auto;
         height: auto;
@@ -126,46 +135,49 @@
         margin: 10px;
         font-size: 15px;
         font-family: "Mulish", sans-serif;
-        color: #48578E;
-          
+        color: #7A8A65;
+
       }
 
       .flex-container .box1 {
+        display: flex;
+        justify-content: center;
         width: auto;
-        height: 250px;
+        height: 350px;
         margin-left: auto;
         overflow: hidden;
         border-radius: 25px;
       }
-        
+
       .flex-container .box1 img {
         width: auto;
-        height: 250px;
-        }
+        height: 350px;
+      }
 
       #Home {
         display: block;
       }
-         
-        /* Style the Connect with me Container */
+
+      /* Style the Connect with me Container */
       input[type=text],
       select,
       textarea {
-        font-family: "IM Fell French Canon", sans-serif;
+        font-family: "Mulish", sans-serif;
+        color: #4F5646;
         width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
+        padding: 10px;
+        border: 5px #4F5646;
         border-radius: 4px;
         box-sizing: border-box;
-        margin-top: 6px;
+        margin-top: 5px;
         margin-bottom: 16px;
         resize: vertical;
       }
 
       input[type=submit] {
-        font-family: "IM Fell French Canon", sans-serif;
-        background-color: #334173;
-        color: white;
+        font-family: "Mulish", sans-serif;
+        background-color: #5B493C;
+        color: D0CBC1;
         padding: 12px 20px;
         border: none;
         border-radius: 4px;
@@ -173,23 +185,28 @@
       }
 
       input[type=submit]:hover {
-        background-color: #45a049;
+        background-color: #7A8A65;
       }
 
       .container {
-        border-radius: 5px;
-        background-color: #7D8EC4;
+        font-family: "IM Fell French Canon", sans-serif;
+        color: #5B493C;
+        border-radius: 15px;
+        background-color: #AD9874;
+        margin-top: 5px;
         padding: 20px;
       }
-    </style>
 
+      /* Style the Doughnut Chart Container */
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   </head>
 
   <body>
     <div id="index">
       <h1>Welcome To My Website</h1>
     </div>
-    <div class="tab">
+    <div class="tab li">
       <button class="tablinks" onclick="openTab(event, 'Home')">About Me</button>
       <button class="tablinks" onclick="openTab(event, 'Interests')">Interests</button>
       <button class="tablinks" onclick="openTab(event, 'Portfolio')">Portfolio</button>
@@ -197,24 +214,26 @@
     </div>
 
     <div id="Home" class="tabcontent">
-     <div>
-      <h2>About Me</h2>
-      <div class="flex-container">
-        <div class="box"> Hi there! My name is Karen, and I'm a Chinese-Canadian. I have an ESFP-A/ESFP-T personality type. You can call me 吳洁萍, which is my Chinese name. This website is about me and my interests, but I'd <i><b>LOVE</b></i> to hear from you, too! I am a full-time University of Waterloo student enrolled in the Global Business and Digital Arts program (GBDA).I am a full-time University of Waterloo student enrolled in the Global Business and Digital Arts program (GBDA). Along with my studies, I work part-time as a sales associate at Zumiez and as an Arts Ambassador for Waterloo. Additionally, I am an active member of two clubs, UWCSA and GBDA SOC. And all of this is just in my second year! In my first year, I worked part-time, studied full-time, and served as a first-year ambassador for UWSA. I also represented the Arts Faculty on the Sustainability Committee. Although I managed my time effectively, I overextended myself and realized it only in my second year.</div>
-        <div class="box1"><img src="https://i.imgur.com/1nZB7Qo.png" alt="myself" width="auto" height="auto"></div>
+      <div>
+        <h2>about me</h2>
+        <div class="flex-container">
+          <div class="box"> Hi there! My name is Karen, and I'm a Chinese-Canadian. I have an ESFP-A/ESFP-T personality type. You can call me 吳洁萍, which is my Chinese name. This website is about me and my interests, but I'd <i><b>LOVE</b></i> to hear from you, too! I am a full-time University of Waterloo student enrolled in the Global Business and Digital Arts program (GBDA).I am a full-time University of Waterloo student enrolled in the Global Business and Digital Arts program (GBDA). Along with my studies, I work part-time as a sales associate at Zumiez and as an Arts Ambassador for Waterloo. Additionally, I am an active member of two clubs, UWCSA and GBDA SOC. And all of this is just in my second year! In my first year, I worked part-time, studied full-time, and served as a first-year ambassador for UWSA. I also represented the Arts Faculty on the Sustainability Committee. Although I managed my time effectively, I overextended myself and realized it only in my second year.</div>
+          <div class="box1"><img src="https://i.imgur.com/1nZB7Qo.png" alt="myself" width="auto" height="auto"></div>
+        </div>
       </div>
-    </div>
-    <div>
-      <h3>Personality Test</h3>
-      <p>I recently took the 16Personlity test, and I got ESFP-A/ESFP-T, Entertainer.
-        I'm not going to lie, my sisters told me to take it.
-        So I'm not too sure what it all means but here are some results.</p>
-      <img src="https://i.imgur.com/Ou76Lau.png" alt="Turbulent (-T) Persoality" width="380" height="255">
-      <img src="https://i.imgur.com/MJlMaAW.png" alt="Assertive (-A) Persoality" width="380" height="255">
-      <p>It says I'm 85% extraverted, 62% observant, 67% feeling, 51% prospecting and 71% turbulent.
-        I'm really hoping these are good things, but I would say it is pretty accurate! But like I said I have not idea what that means. I also don't know if being an Aries also play a big part into it. However, some of my friends have told me it does, so there is some more information about me.</p>
-    </div>
-
+      <div>
+        <h3>Personality Test</h3>
+        <p>I recently took the 16Personlity test, and I got ESFP-A/ESFP-T, Entertainer.
+          I'm not going to lie, my sisters told me to take it.
+          So I'm not too sure what it all means but here are some results.</p>
+        <img src="https://i.imgur.com/Ou76Lau.png" alt="Turbulent (-T) Persoality" width="auto" height="255">
+        <img src="https://i.imgur.com/MJlMaAW.png" alt="Assertive (-A) Persoality" width="auto" height="255">
+        <p>It says I'm 85% extraverted, 62% observant, 67% feeling, 51% prospecting and 71% turbulent.
+          I'm really hoping these are good things, but I would say it is pretty accurate! But like I said I have not idea what that means. I also don't know if being an Aries also play a big part into it. However, some of my friends have told me it does, so there is some more information about me.</p>
+      </div>
+      <div>
+      <canvas id="myChart" style="width:100%;max-width:900px"></canvas>
+      </div>
     <div>
       <h3>Strengths and Weaknesses</h3>
       <p>On the site, it also says my strengths and weaknesses, which I find pretty helpful. This is because I'm able to focus on what I need to improve on and hopefully, get better.</p>
@@ -223,10 +242,10 @@
     </div>
     </div>
     <div id="Interests" class="tabcontent">
-      <h2>My Interests</h2>
+      <h2>my interests</h2>
       <p>I would say I have a lot of interests, I like to have my plate full of things to do. One thing that I have been doing a lot recently is nails. It's just cute and honestly, girl mathing it, I'm technically saving money than actually getting them done, sooo. It's an investment! :) Here are some of my work. I'm currently still learning, it's not that good.</p>
       <br>
-        
+
     </div>
 
     <div id="Portfolio" class="tabcontent">
@@ -234,17 +253,16 @@
     </div>
 
     <div id="Contact" class="tabcontent">
-            <h2>connect with me :)</h2>
-
+      <h2>connect with me :)</h2>
       <div class="container">
         <form action="/action_page.php">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="name">name</label>
+          <input type="text" id="name" name="name" placeholder="Your name..">
 
-          <label for="lname">Instagram</label>
+          <label for="lname">instagram</label>
           <input type="text" id="lname" name="lastname" placeholder="Instagram Username...">
 
-          <label for="country">Continent</label>
+          <label for="country">continent</label>
           <select id="country" name="country">
             <option value="nothing"></option>
             <option value="north america">North America</option>
@@ -256,28 +274,54 @@
             <option value="europe">Europe</option>
           </select>
 
-          <label for="subject">Subject</label>
+          <label for="subject">subject</label>
           <textarea id="subject" name="subject" placeholder="chat with me..." style="height:200px"></textarea>
 
           <input type="submit" value="Submit">
         </form>
+      </div>
+      <script>
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+
+        const xValues = ["extraverted", "turbulent", "feeling", "observant ", "prospecting"];
+        const yValues = [85, 71, 67, 62, 51];
+        const barColors = [
+          "#212C58",
+          "#334173",
+          "#48578E",
+          "#6171A9",
+          "#7D8EC4"
+        ];
+
+       new Chart("myChart", {
+          type: "bar",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            title: {
+              display: true,
+              text: "My Trait Percentage"
+            }
+          }
+        });
+      </script>
     </div>
-    <script>
-      function openTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-    </script>
-
   </body>
-
 </html>
